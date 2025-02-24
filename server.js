@@ -28,13 +28,7 @@ app.get('/', (req, res) => {
   res.send('API funcionando');
 });
 
-// Obtener usuarios
-app.get('/users', (req, res) => {
-  db.query('SELECT * FROM user', (err, results) => {
-    if (err) return res.status(500).json({ error: err.message });
-    res.json(results);
-  });
-});
+
 
 // Iniciar servidor
 const PORT = process.env.PORT || 3000;
